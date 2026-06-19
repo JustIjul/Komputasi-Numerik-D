@@ -15,11 +15,11 @@ double trapezoidal(double a, double b, int n) {
 
 int main() {
     double a = 0.0, b = 4.0;
-    int n_max = 5; // level ekstrapolasi (pakai 1,2,4,...,32 pias)
+    int n_max = 5;
     double R[10][10];
 
     for (int i = 0; i <= n_max; i++) {
-        int n_pias = 1 << i; // 2^i
+        int n_pias = 1 << i;
         R[i][0] = trapezoidal(a, b, n_pias);
 
         for (int j = 1; j <= i; j++) {
